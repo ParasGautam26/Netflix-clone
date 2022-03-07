@@ -11,36 +11,27 @@
         </div>
         <div class="form-container">
             <form>
-                <h1>Sign In</h1>
+                <h1>Sign Up</h1>
                 <div class="form-group">
                     <input type="text" required>
-                    <label>Email or phone number</label>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" required>
+                    <label>Phone Number</label>
                 </div>
                 <div class="form-group">
                     <input type="password" required>
-                    <label>Password</label>
+                    <label>Create Password</label>
                 </div>
-                <button>Sign In</button>
-                <div class="remember">
-                    <div class="left">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember Me</label>
-                    </div>
-                    <div class="right">
-                        <a routerLink="/home">Need help?</a>
-                    </div>
-                </div>
-                <div class="facebook-login">
-                    <img src="/assets/images/fb-logo.png">
-                    <a routerLink="/home">Login with Facebook</a>
-                </div>
-                <div class="signup">
-                    <p>New to Netflix? <a routerLink="/signup">Sign up now</a>.</p>
-                </div>
-                <p class="captcha">
-                    This page is protected by Google reCAPTCHA to ensure you're not a bot.
-                    <a routerLink="/home">Learn more</a>.
-                </p>
+                <button>Sign Up</button>
+                <p>Already registered? <a routerLink="/login">Click to Sign in !</a></p>
+
             </form>
         </div>
         <footer>
