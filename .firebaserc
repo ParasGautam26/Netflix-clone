@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "netflix-3d": {
+      "hosting": {
+        "Netflix-clone": [
+          "netflix-3d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "netflix-3d"
+  }
+}

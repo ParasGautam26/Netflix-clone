@@ -3,6 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    projectId: 'netflix-3d',
+    appId: '1:705918373192:web:14a7e2ebcbcb59ce0d377d',
+    storageBucket: 'netflix-3d.appspot.com',
+    apiKey: 'AIzaSyC6WnNnJLfNyJfldLSeLW6Jjn5pgNY-pz4',
+    authDomain: 'netflix-3d.firebaseapp.com',
+    messagingSenderId: '705918373192',
+    measurementId: 'G-8YF5GMB600',
+  },
   production: false
 };
 
