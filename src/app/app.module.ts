@@ -9,17 +9,21 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
+import { WatchComponent } from './Components/watch/watch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    WatchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],
