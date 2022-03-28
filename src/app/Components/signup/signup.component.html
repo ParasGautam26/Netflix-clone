@@ -10,41 +10,41 @@
                 </svg>
         </div>
         <div class="form-container">
-            <form>
+            <form [formGroup]="signUpForm" (ngSubmit)="submit()">
                 <h1>Sign Up</h1>
                 <div class="form-group">
-                    <input type="text" required>
+                    <input formControlName="name" required>
                     <label>Full Name</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" required>
+                    <input type="email" formControlName="email" required>
                     <label>Email Address</label>
                 </div>
                 <div class="form-group">
-                    <input type="number" required>
-                    <label>Phone Number</label>
+                    <input type="password" formControlName="password" required>
+                    <label>Password</label>
                 </div>
-                <div class="form-group">
-                    <input type="password" required>
-                    <label>Create Password</label>
+                <div class=" form-group ">
+                    <input type="password " formControlName="confirmPassword" required>
+                    <label>Confirm Password</label>
                 </div>
-                <button>Sign Up</button>
-                <p>Already registered? <a routerLink="/login">Click to Sign in !</a></p>
+                <button type="submit ">Sign Up</button>
+                <p>Already registered? <a routerLink="/login ">Click to Sign in !</a></p>
 
             </form>
         </div>
         <footer>
-            <div class="top">
-                <a routerLink="/home">Questions? Contact us.</a>
+            <div class="top ">
+                <a routerLink="/home ">Questions? Contact us.</a>
             </div>
-            <div class="links">
-                <a routerLink="/home">FAQ</a>
-                <a routerLink="/home">Help Center</a>
-                <a routerLink="/home">Terms of Use</a>
-                <a routerLink="/home">Privacy</a>
-                <a routerLink="/home">Cookie Preference</a>
-                <a routerLink="/home">Corporate Information</a>
+            <div class="links ">
+                <a routerLink="/home ">FAQ</a>
+                <a routerLink="/home ">Help Center</a>
+                <a routerLink="/home ">Terms of Use</a>
+                <a routerLink="/home ">Privacy</a>
+                <a routerLink="/home ">Cookie Preference</a>
+                <a routerLink="/home ">Corporate Information</a>
             </div>
         </footer>
     </div>
