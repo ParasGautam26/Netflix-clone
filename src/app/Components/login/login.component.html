@@ -10,17 +10,17 @@
                 </svg>
         </div>
         <div class="form-container">
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="submit()">
                 <h1>Sign In</h1>
                 <div class="form-group">
-                    <input type="text" required>
-                    <label>Email or phone number</label>
+                    <input formControlName="email" required>
+                    <label>Email</label>
                 </div>
                 <div class="form-group">
-                    <input type="password" required>
+                    <input formControlName="password" type="password" required>
                     <label>Password</label>
                 </div>
-                <button>Sign In</button>
+                <button type="submit">Sign In</button>
                 <div class="remember">
                     <div class="left">
                         <input type="checkbox" id="remember">
