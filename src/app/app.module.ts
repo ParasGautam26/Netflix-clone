@@ -12,6 +12,14 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WatchComponent } from './Components/watch/watch.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { SliderComponent } from './Components/slider/slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
+import {HttpClientModule} from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +27,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    WatchComponent
+    WatchComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +36,14 @@ import { HotToastModule } from '@ngneat/hot-toast';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    HotToastModule.forRoot()
+    HotToastModule.forRoot(),
+    BrowserAnimationsModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatBadgeModule,
+    SlickCarouselModule,
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
