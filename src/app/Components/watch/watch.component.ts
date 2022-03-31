@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import { Router } from '@angular/router';
 import {Subscription} from 'rxjs';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import {Movies} from '../../models/movies';
 import {MovieService} from '../../services/movie.service';
 @Component({
@@ -8,6 +10,8 @@ import {MovieService} from '../../services/movie.service';
   styleUrls: ['./watch.component.scss']
 })
 export class WatchComponent implements OnInit, OnDestroy {
+
+  user$ = this.authService.currentUser$;
   sticky = false;
   subs: Subscription[] = [];
   trending: Movies;
@@ -26,7 +30,7 @@ export class WatchComponent implements OnInit, OnDestroy {
   @ViewChild('stickHeader') header: ElementRef;
   headerBGUrl: string;
 
-  constructor(private movie: MovieService) {
+  constructor(private movie: MovieService,public authService:AuthenticationService, private router:Router) {
   }
 
   ngOnInit(): void {
@@ -55,6 +59,12 @@ export class WatchComponent implements OnInit, OnDestroy {
     } else {
       this.sticky = false;
     }
+  }
+
+  logout(){
+    this.authService.logout().subscribe(()=>{ 
+        this.router.navigate(['/login']);
+    });
   }
 
 }

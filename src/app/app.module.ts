@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {HttpClientModule} from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatBadgeModule,
     SlickCarouselModule,
     HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

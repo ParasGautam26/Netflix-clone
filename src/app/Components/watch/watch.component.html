@@ -47,12 +47,13 @@
                                 <mat-icon>search</mat-icon>
                             </a>
                         </li>
-                        <li><a routerLink="/watch">Children</a></li>
+                        <li *ngIf="user$ | async as user"><a routerLink="/login">{{user.displayName}}</a></li>
                         <li>
-                            <a routerLink="/watch">
-                                <mat-icon>logout</mat-icon>
-                            </a>
+
+                            <mat-icon id="logt" (click)="logout()">logout</mat-icon>
                         </li>
+
+
                         <li>
                             <a routerLink="/watch">
                                 <mat-icon>notifications</mat-icon>
